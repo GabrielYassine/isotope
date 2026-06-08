@@ -1,0 +1,56 @@
+:root {
+    --color-bg: #303030;
+    --color-panel: #242424;
+    --color-panel-hover: #2e2e2e;
+    --color-panel-active: #4a4a4a;
+    --color-panel-drop: #1a1a1a;
+    --color-hover: #999999;
+    --color-border: #777777;
+    --color-border-highlight: #FFD700;
+    --color-error: #78200A;
+
+    --color-text: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --font-xs: 0.8rem;
+    --font-sm: 1rem;
+    --font-md: 1.5rem;
+    --font-lg: 2rem;
+    --font-xxl: 5rem;
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+
+    --radius-sm: 0.2rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+
+    --navbar-height: clamp(3rem, 6vh, 4rem);
+    --sidebar-width: clamp(8rem, 15vw, 22rem);
+
+    --puzzle-piece-max-size: 11rem;
+    --puzzle-row-pieces: 6;
+
+    --color-searchSpace: #4fbf73;
+    --color-problem: #4fbfb6;
+    --color-algorithm: #bf924f;
+    --color-heuristicFunction: #9333ea;
+    --color-constructionPolicy: #dc2626;
+    --color-pheromoneModel: #ea580c;
+    --color-generator: #b44fbf;
+    --color-selection: #bf4f4f;
+    --color-parentSelectionRule: #f59e0b;
+    --color-crossover: #8b5cf6;
+    --color-populationModel: #4f5ebf;
+    --color-stopCondition: #bfb64f;
+    --color-observer: #bf4f81;
+
+    --green-500: #22c55e;
+    --green-700: #15803d;
+    --red-500: #ef4444;
+    --red-700: #b91c1c;
+    --yellow-500: #FFD700;
+    --yellow-700: #b89400;
+}

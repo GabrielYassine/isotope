@@ -26,15 +26,12 @@ echo Waiting for backend on port 8080...
 powershell -Command "while(-not (Test-NetConnection -ComputerName 'localhost' -Port 8080 -InformationLevel Quiet)){Write-Host '.' -NoNewline; Start-Sleep -Seconds 1}; Write-Host ' Backend ready.'"
 
 echo Installing frontend dependencies...
-cd /d "%~dp0frontend"
+cd /d "%~dp0frontend-vite"
 call npm install
 
-echo Building TypeScript frontend...
-call npm run build
-
-echo Starting frontend...
+echo Starting Vite frontend...
 set VITE_BACKEND_ORIGIN=http://localhost:8080
-start "frontend" cmd /k "cd /d %~dp0frontend && npm start"
+start "frontend" cmd /k "cd /d %~dp0frontend && npm run dev"
 
 echo.
 echo Backend:  http://localhost:8080

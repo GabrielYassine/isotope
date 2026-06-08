@@ -1,0 +1,23 @@
+.home-page {
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-title {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: var(--color-border-highlight);
+}
