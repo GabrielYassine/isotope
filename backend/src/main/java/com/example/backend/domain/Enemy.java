@@ -4,6 +4,6 @@ public class Enemy extends Entity {
     private Point2D origin;
 
     public Enemy(Point2D position) {
-        this.origin = position;
+        super(position);
     }
 }
