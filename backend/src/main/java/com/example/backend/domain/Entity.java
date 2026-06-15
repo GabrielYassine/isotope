@@ -8,6 +8,9 @@ public abstract class Entity {
 
     public Entity(Point2D origin) {
         this.origin = origin;
+        this.health = 100;
+        this.speed = 5;
+        this.angle = 30;
     }
 
     public void updatePos(Point2D position) {
@@ -29,5 +32,13 @@ public abstract class Entity {
         double velocityY = Math.sin(angleRad) * speed;
 
         origin.updatePos(velocityX, velocityY);
+    }
+
+    @Override
+    public String toString() {
+        return "Player Position: " + origin +
+                "\n Player Health: " + health +
+                "\n Player Speed: " + speed +
+                "\n Player Angle: " + angle + "\n";
     }
 }
