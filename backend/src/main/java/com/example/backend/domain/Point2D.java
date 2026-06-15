@@ -8,9 +8,4 @@ public class Point2D {
         this.posX = xCord;
         this.posY = yCord;
     }
-
-    private void updatePos(double xCord, double yCord) {
-        this.posX = xCord;
-        this.posY = yCord;
-    }
 }
