@@ -1,7 +1,5 @@
 package com.example.backend.domain;
 
-import com.example.backend.util.Time;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +7,16 @@ public class Game {
     List<Entity> entities = new ArrayList<>();
     Player p1;
 
+    int maxFPS = 60; // Should be configurable
+
     public Game() {
+        System.out.println("Game has been created");
         initializeGame();
+        System.out.println("Game has been initialized");
         loop();
+        System.out.println("Loop has been exited");
+        endGame();
+        System.out.print("Game has ended");
     }
 
     public void initializeGame() {
@@ -24,31 +29,37 @@ public class Game {
     }
 
     public void loop() {
-        float initialTime = Time.getTime();
-        float endTime;
-        float deltaTime = -1.0f;
-        int frames = 0;
-        int updates = 0;
+        double timePerFrame = 1_000_000_000.0 / maxFPS;
+
+        long previousTime = System.nanoTime();
+        double delta = 0;
 
         while (!shouldEnd()) {
-            if (deltaTime >= 0) {
-                updates++;
+            long currentTime = System.nanoTime();
+
+            delta += (currentTime - previousTime) / timePerFrame;
+            previousTime = currentTime;
+
+            if (delta >= 1) {
+                tick();
+                render();
+                delta--;
             }
-            frames++;
-
-            endTime = Time.getTime();
-            deltaTime = endTime - initialTime;
-            initialTime = endTime;
         }
+    }
 
-        endGame();
+    private void tick() {
+//        p1.move();
+//        System.out.println(p1);
+    }
+
+    private void render() {
     }
 
     private boolean shouldEnd() {
-        return true;
+        return false;
     }
 
     private void endGame() {
     }
-
 }
