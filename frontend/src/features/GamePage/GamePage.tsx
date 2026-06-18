@@ -1,9 +1,11 @@
+import "./game.css"
+
 function GamePage() {
     return (
-        <main>
-            <p>
-                This is the new game page feature. It is currently empty.
-            </p>
+        <main className={"game-page"}>
+            <div className={"game-content-area"}>
+                <canvas id="canvas" width="750" height="750">Hello</canvas>
+            </div>
         </main>
     );
 }

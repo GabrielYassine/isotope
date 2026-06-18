@@ -1,6 +1,9 @@
 import "./home.css";
+import {useNavigate} from "react-router-dom";
 
 function HomePage() {
+    const navigate = useNavigate();
+
     return (
         <main className="home-page">
             <div className="content-area">
@@ -9,7 +12,7 @@ function HomePage() {
                 </div>
 
                 <div>
-                    <button className="btn btn--green">
+                    <button className="btn btn--green" onClick={() => navigate("/game")}>
                         Start Game
                     </button>
                 </div>

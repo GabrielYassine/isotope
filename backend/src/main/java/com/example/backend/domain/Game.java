@@ -6,10 +6,12 @@ import java.util.List;
 public class Game {
     List<Entity> entities = new ArrayList<>();
     Player p1;
+    Map map;
 
     int maxFPS = 60; // Should be configurable
 
-    public Game() {
+    public Game(Map chosenMap) {
+        this.map = chosenMap;
         System.out.println("Game has been created");
         initializeGame();
         System.out.println("Game has been initialized");
